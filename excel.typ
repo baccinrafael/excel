@@ -11,7 +11,32 @@
 )
 
 #pagebreak()
-= Atalhos
-= Exemplo 1
-== Exemplo 2
-=== Exemplo 3
+
+// customização dos capítulos
+
+#show heading.where(level:1): it => [
+  #set text(size: 30pt)
+  #block(it.body)
+  #v(0.5em)
+]
+
+// Capítulo de Atalhos
+
+= Atalhos de Teclado
+
+// Tabela dos atalhos
+
+#table(
+  columns: (auto, 1fr, auto),
+  align: (left, center, right),
+  stroke: 0.1pt + blue,
+
+  // Cabeçalho
+  table.header(
+    [*Atalho*], [*Ação*], [*Dica*]
+  ),
+
+  [Ctrl + S], [Salvar Arquivo], [],
+  [Ctrl + S], [Salvar Arquivo], [],
+
+)
