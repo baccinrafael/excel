@@ -5,7 +5,10 @@
 // Página 2 (Cabeçalho)
 
 #set heading(numbering: "1.")
-#set text(16pt)
+#set text(
+  font: "Noto Sans",
+  size: 14pt
+)
 #outline(
   title: [Sumário], 
 )
@@ -15,7 +18,7 @@
 // customização dos capítulos
 
 #show heading.where(level:1): it => [
-  #set text(size: 24pt)
+  #set text(size: 20pt)
   #block(it.body)
   #v(0.5em)
 ]
