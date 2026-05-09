@@ -15,7 +15,7 @@
 // customização dos capítulos
 
 #show heading.where(level:1): it => [
-  #set text(size: 30pt)
+  #set text(size: 24pt)
   #block(it.body)
   #v(0.5em)
 ]
