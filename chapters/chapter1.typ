@@ -1,17 +1,33 @@
 // Capítulo de Atalhos
 
-#import "../template/components.typ": tabela_atalhos
+#import "../template/tables.typ": shortcut_tables
 
 = Atalhos de Teclado
-== Navageção
+== Atalhos gerais
 
-#tabela_atalhos(
+#shortcut_tables(
   ([Atalho], [Ação], [Dica]),
   (
-    ([Tab], [Navegação Horizontal (direita)], [Usado para não perder as alterações caso feche acidentalmente.]),
-    ([Enter], [Navegação Vertical (baixo)], [Abre uma nova seção de planilhas dentro do mesmo arquivo.]),
-    ([Shift + Tab], [Navegação Vertical (esquerda)], [Abre uma nova seção de planilhas dentro do mesmo arquivo.]),
-    ([Shift + Enter], [Navegação Vertical (cima)], [Abre uma nova seção de planilhas dentro do mesmo arquivo.]),
+    ([Ctrl + N], [Novo arquivo], [Abre uma planilha em branco]),
+    ([Ctrl + O], [Abrir arquivo], [Abre o explorador de arquivos]),
+    ([Ctrl + S], [Salvar], [Salve sempre com frequência!]),
+    ([Ctrl + Z], [Desfazer], [Volta a última ação realizada]),
+    ([Ctrl + Y], [Refazer], [Repete a ação desfeita]),
+    ([Ctrl + P], [Imprimir], [Abre o painel de impressão]),
+    ([F12], [Salvar como], [Escolhe nome/local do arquivo]),
+    ([Alt + F4], [Fechar], [Excel Fecha o programa completamente])
+  )
+)
+
+== Navegação
+
+#shortcut_tables(
+  ([Atalho], [Ação], [Dica]),
+  (
+    ([Tab], [Navegação Horizontal (direita)], [Navegar entre colunas (para a direita).]),
+    ([Enter], [Navegação Vertical (baixo)], [Navegar entre linhas (para a direita).]),
+    ([Shift + Tab], [Navegação Vertical (esquerda)], [Navegar entre colunas (para a esquerda).]),
+    ([Shift + Enter], [Navegação Vertical (cima)], [Navegar entre linhas (para a esquerda).]),
   )
 )
 
@@ -19,10 +35,10 @@
 
 // Tabela dos atalhos
 
-#tabela_atalhos(
+#shortcut_tables(
   ([Atalho], [Ação], [Dica]),
   (
-    ([Ctrl + S], [Salvar Arquivo], [Usado para não perder as alterações.]),
+    ([Ctrl + O], [Abrir planilha], [Abrir uma nova aba de planilha]),
     ([Ctrl + Z], [Desfazer],       [Reverte a última ação.]),
   )
 )
@@ -30,10 +46,10 @@
 
 == Formatação
 
-#tabela_atalhos(
+#shortcut_tables(
   ([Atalho], [Ação], [Dica]),
   (
-    ([Ctrl + S], [Salvar Arquivo], [Usado para não perder as alterações.]),
-    ([Ctrl + Z], [Desfazer],       [Reverte a última ação.]),
+    ([Ctrl + 1], [Formatação de célula], [Abre o menu de formatação de célula.]),
+    ([Ctrl + Z], [Desfazer], [Reverte a última ação.]),
   )
 )
