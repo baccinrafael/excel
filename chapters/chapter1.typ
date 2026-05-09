@@ -7,6 +7,14 @@
 
 #show table: set text(size: 10pt)
 
+#show heading.where(level:2): it => [
+  #set text(blue, 14pt) 
+
+  #block(it.numbering + [] + " " + it.body)
+  #v(1em)
+]
+
+
 = Atalhos de Teclado
 == Atalhos gerais
 
@@ -20,13 +28,13 @@
     ([Ctrl + Y], [Refazer], [Repete a ação desfeita]),
     ([Ctrl + P], [Imprimir], [Abre o painel de impressão]),
     ([F12], [Salvar como], [Escolhe nome/local do arquivo]),
-    ([Alt + F4], [Fechar], [Excel Fecha o programa completamente])
+    ([Alt + F4], [Fechar Excel], [Fecha o programa completamente])
   ),
   (blue),
   (white, rgb(240, 240, 240))
 )
 
-== Navegação
+== Navegação e Seleção
 
 #shortcut_tables(
   ([Atalho], [Ação], [Dica]),
@@ -44,6 +52,32 @@
   ),
   (blue),
   (white, rgb(240, 240, 240))
+)
+
+== Edição de células
+
+#shortcut_tables(
+  ([Atalho], [Ação], [Dica]),
+  (
+    ([F2], [Editar célula ativa], [Entra no modo de edição]),
+    ([Delete], [Limpar conteúdo], [Apaga o conteúdo, mantém formato]),
+    ([Ctrl + C], [Copiar], [Copia célula(s) selecionada(s)]),
+    ([Ctrl + X], [Recortar], [Move o conteúdo da célula]),
+    ([Ctrl + V], [Colar], [Cola o conteúdo copiado]),
+    ([Ctrl + Alt + V], [Colar especial], [Escolhe o que colar (valores, formato...]),
+    ([Ctrl + D], [Preencher para baixo], [Copia a célula de cima]),
+    ([Ctrl + R], [Preencher para direita], [Copia a célula da esquerda]),
+    ([Ctrl + ;], [Inserir data atual], [Insere a data de hoje]),
+    ([Ctrl + :], [Inserir hora atual], [Insere a hora atual]),
+    ([Ctrl + '], [Copiar fórmula de cima], [Copia só a fórmula (sem formatos)]),
+    ([Alt + Enter], [Quebra de linha na célula], [Cria uma nova linha dentro da célula]),
+    ([Esc], [Cancelar edição], [Sai do modo de edição sem salvar]),
+    ([Enter], [Confirmar e descer], [Confirma e vai para a célula abaixo]),
+    ([Tab], [Confirmar e mover direita], [Confirma e vai para a próxima coluna]),
+  ),
+  (blue),
+  (white, rgb(240, 240, 240))
+
 )
 
 == Manipulação
