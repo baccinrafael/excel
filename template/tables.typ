@@ -5,27 +5,29 @@
   // alinhamentos flexíveis (as células entre a primeira e a última sempre vão ter o alinhamento central)
   #let aligns = (left,) + (left,) * (col-count - 2) + (left,)
 
-  #table(
-    columns: cols,
-    align: aligns,
-    stroke: none,
-    inset: 10pt,
-    fill: (col, row) => {
-      if row == 0 {
-        header-colors
-      } else {
-        colors.at(calc.rem(row -1, colors.len()))
-      }
-    },
-    
+#show table: set text(size: 8pt)
 
-    // Alinhando todo cabeçalho para o centros
-    table.header(
-      ..headers.map(h => table.cell(
-          align: center,
-          text(fill: white)[*#h*]))
-        ),
+#table(
+  columns: cols,
+  align: aligns,
+  stroke: none,
+  inset: 10pt,
+  fill: (col, row) => {
+    if row == 0 {
+      header-colors
+    } else {
+      colors.at(calc.rem(row -1, colors.len()))
+    }
+  },
+  
 
-    ..rows.flatten()
+  // Alinhando todo cabeçalho para o centros
+  table.header(
+    ..headers.map(h => table.cell(
+        align: center,
+        text(fill: white)[*#h*]))
+      ),
+
+  ..rows.flatten()
   )
 ]
