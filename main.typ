@@ -9,6 +9,14 @@
   font: "Noto Sans",
   size: 14pt
 )
+
+#show heading.where(level:2): it => [
+  #set text(blue, 14pt) 
+
+  #block( it.body)
+  #v(1em)
+]
+
 #outline(
   title: [Sumário], 
 )
@@ -26,3 +34,5 @@
 // Capítulo de Atalhos
 
 #include "chapters/chapter1.typ"
+#pagebreak()
+#include "chapters/chapter2.typ"
