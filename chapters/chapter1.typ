@@ -1,21 +1,14 @@
 // Capítulo de Atalhos
 
 #import "../template/tables.typ": shortcut_tables
+#import "../template/blocks.typ": dica, info
+
 #set text(
   font: "Noto Sans"
 )
 
-#show table: set text(size: 10pt)
-
-#show heading.where(level:2): it => [
-  #set text(blue, 14pt) 
-
-  #block(it.numbering + [] + " " + it.body)
-  #v(1em)
-]
-
-
 = Atalhos de Teclado
+
 == Atalhos gerais
 
 #shortcut_tables(
@@ -54,7 +47,7 @@
   (white, rgb(240, 240, 240))
 )
 
-== Edição de células
+== Edição de Células
 
 #shortcut_tables(
   ([Atalho], [Ação], [Dica]),
@@ -80,29 +73,25 @@
 
 )
 
-== Manipulação
-
-// Tabela dos atalhos
+== Formatação Rápida
 
 #shortcut_tables(
-  ([Atalho], [Ação], [Dica]),
+  ([Atalho], [Ação]),
   (
-    ([Ctrl + O], [Abrir planilha], [Abrir uma nova aba de planilha]),
-    ([Ctrl + Z], [Desfazer],       [Reverte a última ação.]),
+    ([Ctrl + 1], [Abrir janela de Formatar Células]),
+    ([Ctrl + N], [Negrito]),
+    ([Ctrl + I], [Itálico]),
+    ([Ctrl + S], [Sublinhado]),
+    ([Ctrl + 5], [Tachado (risco no meio do texto)]),
+    ([Ctrl + Shift + \$], [Formato moeda]),
+    ([Ctrl + Shift + %], [Formato porcentagem]),
+    ([Ctrl + Shift + \#], [Formato data]),
+    ([Ctrl + Shift + !], [Formato número com 2 casas decimais])
   ),
   (blue),
   (white, rgb(240, 240, 240))
 )
 
+#dica([Use Ctrl + Z imediatamente se fizer algo errado. O Excel permite desfazer várias ações seguidas!])
 
-== Formatação
-
-#shortcut_tables(
-  ([Atalho], [Ação], [Dica]),
-  (
-    ([Ctrl + 1], [Formatação de célula], [Abre o menu de formatação de célula.]),
-    ([Ctrl + Z], [Desfazer], [Reverte a última ação.]),
-  ),
-  (blue),
-  (white, rgb(240, 240, 240))
-)
+#info([No Excel 365 você pode usar Ctrl + Shift + L para ativar/desativar Filtros rapidamente.])
