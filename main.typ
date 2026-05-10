@@ -10,8 +10,8 @@
   size: 14pt
 )
 
-#show heading.where(level:2): it => [
-  #set text(blue, 14pt) 
+#show heading.where(level: 2): it => [
+  #set text(14pt) 
 
   #block( it.body)
   #v(1em)
