@@ -1,6 +1,6 @@
 // Capítulo de Atalhos
 
-#import "../template/tables.typ": shortcut_tables
+#import "../template/tables.typ": customizable_tables
 #import "../template/blocks.typ": dica, info
 
 #set text(
@@ -11,7 +11,7 @@
 
 == Atalhos gerais
 
-#shortcut_tables(
+#customizable_tables(
   ([Atalho], [Ação], [Dica]),
   (
     ([Ctrl + N], [Novo arquivo], [Abre uma planilha em branco]),
@@ -29,10 +29,10 @@
 
 == Navegação e Seleção
 
-#shortcut_tables(
+#customizable_tables(
   ([Atalho], [Ação], [Dica]),
   (
-    ([Setas ↑↓←→], [Mover célula por célula], [Navegação básica na planilha]),
+    ([Setas \u{2191}\u{2193}\u{2190}\u{2192}], [Mover célula por célula], [Navegação básica na planilha]),
     ([Ctrl + Setas], [Ir até o último dado], [Pula até a última célula preenchida]),
     ([Ctrl + Home], [Ir para célula A1], [Volta ao início da planilha]),
     ([Ctrl + End], [Ir para última célula], [Vai ao final dos dados]),
@@ -49,7 +49,7 @@
 
 == Edição de Células
 
-#shortcut_tables(
+#customizable_tables(
   ([Atalho], [Ação], [Dica]),
   (
     ([F2], [Editar célula ativa], [Entra no modo de edição]),
@@ -75,7 +75,7 @@
 
 == Formatação Rápida
 
-#shortcut_tables(
+#customizable_tables(
   ([Atalho], [Ação]),
   (
     ([Ctrl + 1], [Abrir janela de Formatar Células]),

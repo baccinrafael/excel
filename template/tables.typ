@@ -1,4 +1,4 @@
-#let shortcut_tables(headers, rows, header-colors, colors) = block(width: 100%)[
+#let customizable_tables(headers, rows, header-colors, colors) = block(width: 100%)[
   #let col-count = headers.len()
   // Colunas flexíveis (as células entre a primeira e a última sempre vão ter o tamanho de 2fr)
   #let cols = (2fr,) + (2fr,) *(col-count - 2) + (3fr,)

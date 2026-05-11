@@ -1,5 +1,5 @@
 #import "../template/blocks.typ": info, dica, atencao
-#import "../template/tables.typ": shortcut_tables
+#import "../template/tables.typ": customizable_tables
 
 = Funções e Fórmulas 
 
@@ -7,7 +7,7 @@
 
 == Funções Matemáticas
 
-#shortcut_tables(
+#customizable_tables(
   ([Função], [O que faz], [Exemplo]),
   (
     ([_=SOMA(intervalo)_], [Soma todos os valores], [_=SOMA(A1:A10)_]),
@@ -30,7 +30,7 @@
 
 == Funções de texto
 
-#shortcut_tables(
+#customizable_tables(
   ([Função], [O que faz], [Exemplo]),
   (
     ([_=MAIÚSCULA(texto)_], [Converte para MAIÚSCULAS], [_=MAIÚSCULA("excel")_]),
@@ -53,7 +53,7 @@
 
 == Funções de Data e Hora
 
-#shortcut_tables(
+#customizable_tables(
   ([Função], [O que faz], [Exemplo]),
   (
     ([_=HOJE()_], [Data de hoje (atualiza sempre)], [_=HOJE()_]),
@@ -75,7 +75,7 @@
 
 == Funções Lógicas e Condicionais
 
-#shortcut_tables(
+#customizable_tables(
   ([Função], [O que faz], [Exemplo]),
   (
     ([_=SE(cond; sim; não)_], [Se/Então/Senão], [_=SE(A1>7; "Aprovado"; "Reprovado")_]),
@@ -96,7 +96,7 @@
 
 == Funções de Procura e Referência
 
-#shortcut_tables(
+#customizable_tables(
   ([Função], [O que faz], [Exemplo]),
   (
     ([=PROCV(valor; tabela; col; 0)], [Procura na 1ª coluna e retorna outra], [=PROCV(A1; B:D; 2; 0)]),
