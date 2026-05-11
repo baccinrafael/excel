@@ -1,5 +1,5 @@
 // Página 1 (Capa)
-#page(background: image("assets/Excel.png",width:100%,height:100%,fit:"cover"))[]
+#page(background: image("assets/Excel.png",width:90%,height:90%,fit:"cover"))[]
 #pagebreak()
 
 // Página 2 (Cabeçalho)
@@ -37,3 +37,4 @@
 #pagebreak()
 #include "chapters/chapter2.typ"
 #include "chapters/chapter3.typ"
+#include "chapters/chapter4.typ"
