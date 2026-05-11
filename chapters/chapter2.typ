@@ -1,4 +1,4 @@
-#import "../template/blocks.typ": info, dica
+#import "../template/blocks.typ": info, dica, atencao
 #import "../template/tables.typ": shortcut_tables
 
 = Funções e Fórmulas 
@@ -71,3 +71,47 @@
 )
 
 #dica([Em DATADIF: use "D" para dias, "M" para meses, e "A" para anos.])
+#pagebreak()
+
+== Funções Lógicas e Condicionais
+
+#shortcut_tables(
+  ([Função], [O que faz], [Exemplo]),
+  (
+    ([_=SE(cond; sim; não)_], [Se/Então/Senão], [_=SE(A1>7; "Aprovado"; "Reprovado")_]),
+    ([_=E(cond1; cond2)_], [Verdadeiro se TODAS forem V], [_=E(A1>5; A1\<10)_]),
+    ([_=OU(cond1; cond2)_], [Verdadeiro se UMA for V], [_=OU(A1="SP"; A1="RJ")_]),
+    ([_=NÃO(cond)_], [Inverte verdadeiro/falso], [_=NÃO(A1="")_]),
+    ([_=SEERRO(fórmula; alt)_], [Trata erro com valor alternativo], [_=SEERRO(A1/B1; 0)_]),
+    ([_=SES(c1;v1; c2;v2; ...)_], [Múltiplas condições (365)], [_=SES(A1>9;"A"; A1>7;"B")_]),
+    ([_=CONT.SE(interv; critério)_], [Conta com condição], [=CONT.SE(A:A; "SP")]),
+    ([_=CONT.SES(iv1; c1; iv2; c2)_], [Conta com múltiplas condições], [_=CONT.SES(A:A;"M"; B:B;">18")_]),
+    ([_=SOMASE(interv; crit; soma)_], [Soma com condição], [_=SOMASE(A:A; "Vendas"; B:B)_]),
+    ([_=SOMASES(...)_], [Soma com múltiplas condições], [Igual ao CONT.SES mas soma]),
+    ([_=MÉDIASE(interv; crit; m)_], [Média com condição], [_=MÉDIASE(A:A; "SP"; B:B)_]),
+    ),
+    (green),
+    (white, rgb(240, 240, 240))
+)
+
+== Funções de Procura e Referência
+
+#shortcut_tables(
+  ([Função], [O que faz], [Exemplo]),
+  (
+    ([=PROCV(valor; tabela; col; 0)], [Procura na 1ª coluna e retorna outra], [=PROCV(A1; B:D; 2; 0)]),
+    ([=PROCH(valor; tabela; lin; 0)], [Procura na 1ª linha e retorna outra], [=PROCH(A1; 1:3; 2; 0)]),
+    ([=ÍNDICE(matriz; lin; col)], [Retorna valor por posição], [=ÍNDICE(A1:C10; 3; 2)]),
+    ([=CORRESP(valor; interv; 0)], [Retorna a posição do valor], [=CORRESP("João"; A:A; 0)]),
+    ([=ÍNDICE + CORRESP], [Alternativa mais flexível ao PROCV], [=ÍNDICE(B:B; CORRESP(A1; A:A; 0))]),
+    ([=PROCX(valor; lkp; ret)], [Versão moderna do PROCV (365)], [=PROCX(A1; B:B; C:C)]),
+    ([=LINS(intervalo)], [Conta linhas do intervalo], [=LINS(A1:A10) → 10]),
+    ([=COLS(intervalo)], [Conta colunas do intervalo], [=COLS(A1:D1) → 4]),
+  ),
+  (green),
+  (white, rgb(240, 240, 240))
+)
+
+#atencao([No PROCV, o último parâmetro 0 (ou FALSO) faz busca exata. Use sempre 0 para evitar erros!])
+
+#info([PROCX está disponível no Excel 365 e substitui o PROCV com muito mais facilidade.])
