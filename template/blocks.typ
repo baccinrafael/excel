@@ -3,6 +3,7 @@
   inset: 12pt,
   width: 100%,
   stroke: green, 
+  radius: 10pt,
   text(
     size: 9pt, 
     [*Dica*: #content]
@@ -14,6 +15,7 @@
   inset: 12pt,
   width: 100%,
   stroke: blue, 
+  radius: 10pt,
   text(
     size: 9pt, 
     [*Info*: #content]
@@ -25,6 +27,7 @@
   inset: 12pt,
   width: 100%,
   stroke: red, 
+  radius: 10pt,
   text(
     size: 9pt, 
     [*Atenção*: #content]
