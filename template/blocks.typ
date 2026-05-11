@@ -19,3 +19,14 @@
     [*Info*: #content]
   ),
 )
+
+#let atencao(content) = block(
+  fill: rgb("#ffe7e7"),
+  inset: 12pt,
+  width: 100%,
+  stroke: red, 
+  text(
+    size: 9pt, 
+    [*Atenção*: #content]
+  ),
+)
