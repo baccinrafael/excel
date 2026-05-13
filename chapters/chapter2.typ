@@ -113,5 +113,6 @@
 )
 
 #atencao([No PROCV, o último parâmetro 0 (ou FALSO) faz busca exata. Use sempre 0 para evitar erros!])
-
 #info([PROCX está disponível no Excel 365 e substitui o PROCV com muito mais facilidade.])
+
+// #context counter(heading).get()
