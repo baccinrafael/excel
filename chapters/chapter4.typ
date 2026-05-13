@@ -15,4 +15,4 @@
   ((white, rgb(240, 240, 240))),
 )
 
-#dica([Pressione F4 enquanto edita uma fórmula para alternar entre os tipos de referência ($A$1 → A$1 → $A1 → A1).])
+#dica([Pressione F4 enquanto edita uma fórmula para alternar entre os tipos de referência (\$A\$1 → A\$1 → \$A1 → A1).])
