@@ -28,6 +28,71 @@
   (white, rgb(240, 240, 240))
 )
 
+== Operadores de cálculo e precedência
+
+=== Operadores aritméticos
+
+#info([Para realizar operações matemáticas básicas, como adição, subtração ou multiplicação , ou combinar números, e produzir *resultados numéricos*, utilize os operadores aritméticos nesta tabela.])
+
+#customizable_tables(
+  ([Operador aritmético], [Significado], [Exemplo]),
+  (
+    ([$+$ (sinal de mais)], [Adição], [_=3+3_]),
+    ([$-$ (sinal de menos)], [Subtração \ Negação], [_=3-3_ \ _=-1_]),
+    ([$*$ (asterisco)], [Multiplicação], [_=3*3_]),
+    ([$"/"$ (barra para a direita)], [Divisão], [_=3/3_]),
+    ([$"%"$ (sinal de porcentagem)], [Porcentagem], [_=20%_]),
+    ([$"^"$ (acento circunflexo)], [Exponenciação], [_=2^3_]),
+  ),
+  (green),
+  (white, rgb(240, 240, 240))
+)
+
+=== Operadores de comparação
+
+#info([Com os operadores na tabela abaixo, pode comparar dois valores. Quando dois valores são comparados com estes operadores, o resultado é um valor lógico VERDADEIRO ou FALSO.])
+
+#customizable_tables(
+  ([Operador de comparação], [Significado], [Exemplo]),
+  (
+    ([$\=$ (sinal de igual)], [Igual a], [_=A1=B1_]),
+    ([$>$ (sinal de maior que)], [Maior que], [_=A1>B1_]),
+    ([$<$ (sinal de menor que)], [Menor que], [_=A1\<B1_]),
+    ([$">="$ (sinal de maior ou igual a)], [Maior ou igual a], [_=A1>=B1_]),
+    ([$"<="$ (sinal de menor ou igual a)], [Menor ou igual a], [_=A1<=B1_]),
+    ([$"<>"$ (sinal de diferente de)], [Diferente de], [_=A!<>B1_]),
+  ),
+  (green),
+  (white, rgb(240, 240, 240))
+)
+
+=== Operador de concatenação de texto
+
+#customizable_tables(
+  ([Operador de comparação], [Significado], [Exemplo]),
+  (
+    ([\& (E comercial)], [Igual a], [_=A1=B1_]),
+  ),
+  (green),
+  (white, rgb(240, 240, 240))
+)
+
+=== Operadores de referência
+
+#customizable_tables(
+  ([Operador de referência], [Significado], [Exemplo]),
+  (
+    ([\: (dois pontos)], [Operador de intervalo, que produz uma referência para todas as células entre duas referências, incluindo as duas referências.], [_=B5:B15_]),
+    ([\, (vírgula)], [Operador união, que combina várias referências numa única referência.], [_=SOMA(B5:B15;D5:D15)_]),
+    ([ (espaço em branco))], [Operador de interseção, que produz uma referência a células comuns às duas referências.], [_SOMA(B7:D7 C6:C8)_]),
+    ([\# (jogo da velha)], [Operador de intervalo transposto, que é utilizado para referenciar um intervalo inteiro numa fórmula de matriz dinâmica.], [_=SOMA(A2\#)_]),
+    ([\@ (arroba)], [Operador de referência, que é utilizado para indicar interseção implícita numa fórmula.], [_=\@A1:A10 \ =SOMA(Tabela1[\@[Janeiro]:[Dezembro]])_]),
+
+  ),
+  (green),
+  (white, rgb(240, 240, 240))
+)
+// Colocar um exercico usando varias funcções e pedir pra explicar. "Exercicio de fixação"
 == Funções de texto
 
 #customizable_tables(
